@@ -1,0 +1,26 @@
+# RaspberryPi GPIO Button Reboot
+A button that if pressed and held for under 3 seconds,
+initiates the reboot command, and if held for over 3 seconds,
+initiates the halt command.
+
+## Components
+* x1 Tactile switch
+* x1 1k om Resistor
+* x1 10k om Resistor
+
+## Setup Instructions
+Assemble breadboard as per circut.png and breadboard.png
+
+### RPi.GPIO script
+btnReboot.py
+Copy to /opt/gpio
+
+### Debian load on boot script
+gpio-btnreboot 
+Copy to /etc/init.d
+
+Finished
+
+## References
+* [GPIO helper](https://pinout.xyz/pinout/pin7_gpio4)
+* [Switch guide](http://www.raspberry-pi-geek.com/Archive/2013/01/Adding-an-On-Off-switch-to-your-Raspberry-Pi)
